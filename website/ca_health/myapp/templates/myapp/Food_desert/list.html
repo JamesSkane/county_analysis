@@ -1,0 +1,25 @@
+{% extends "myapp/base.html" %}
+
+{% block title %}County Health Data{% endblock %}
+
+{% block content %}
+<div>
+    <h1>County Health Data</h1>
+    </div>
+    {% for Food_Desert in Food_Deserts %}
+ <div>
+        <h2><a href="">{{ Food_Desert.county }}</a></h2>
+         <p>Population: {{ Food_Desert.pop2010 }}</p>
+         <p>Census Tracts: {{ Food_Desert.n_tracts }}</p>
+         <p>Census Tracts considerd 'Food Deserts': {{ Food_Desert.num_fd }}</p>
+      <p>{{linebreaksbr }}</p>
+
+   </div>
+
+<!--{% include "pagination.html" with page=Food_Desert %}-->
+
+
+    {% endfor %}
+    
+    {% include "pagination.html" with page=page_obj %}
+{% endblock %}

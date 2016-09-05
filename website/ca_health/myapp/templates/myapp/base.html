@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!--<!DOCTYPE html>-->
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link href="{% static 'css/myapp.css' %}" rel="stylesheet">
+</head>
+<div id="title">
+     <h1>Exploring Health in CA Counties</h1>
+</div>
+<body>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="sidebar">
+        <h2>CA Counties</h2>
+        <p>Health Data comparison site.</p>
+    </div>
+</body>
+</html>
